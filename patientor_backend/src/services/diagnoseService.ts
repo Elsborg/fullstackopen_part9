@@ -16,8 +16,16 @@ const getNonSensitiveEntries = (): NonSensitiveDiagnoseEntry[] => {
     }));
 };
 
-const addDiagnose = () => {
-    return null;
+const addDiagnose = ( code: string, name: string, latin: string ): DiagnoseEntry => {
+    
+    const newDiagnoseEntry = {
+        code,
+        name,
+        latin
+    };
+
+    diagnoses.push(newDiagnoseEntry);
+    return newDiagnoseEntry;
 };
 
 export default {
